@@ -24,9 +24,10 @@
                             <li class="list-group-item"><strong>Word Count:</strong> {{ word_count }}</li>
                         </ul>
                         <div class="mt-4 text-center">
-                            <a href="/uploads/{{ user[1] }}_file.txt" class="btn btn-primary">
+                            <a href="{{ url_for('download_file', filename=user.username + '_file.txt') }}" class="btn btn-primary" download>
                                 Download File
                             </a>
+                            <a href="{{ url_for('logout') }}" class="btn btn-primary">Logout</a>
                         </div>
                     </div>
                 </div>
